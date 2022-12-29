@@ -31,7 +31,7 @@ router.post("/api/post",checkauth ,async (req, res) => {
 })
 
 // comment to post............
-router.put('/api/comment',checkauth,(req,res)=>{
+router.post('/api/comment',checkauth,(req,res)=>{
     const comment = {
         text:req.body.text,
         postedBy:req.user._id
